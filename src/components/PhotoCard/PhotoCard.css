@@ -1,0 +1,32 @@
+.photo-card__link {
+  display: block;
+  perspective: 1000px;
+
+  text-align: center;
+  text-decoration: none;
+  color: var(--light);
+}
+
+.photo-card__picture {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s;
+}
+
+.photo-card__picture:hover {
+  transform: scale(1.03) rotateX(5deg) translateY(-10px);
+}
+
+.photo-card__title {
+  margin: 20px 0 0;
+
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.photo-card__description {
+  margin: 7px 0 0;
+
+  font-family: var(--secondary-font);
+  font-weight: 700;
+}

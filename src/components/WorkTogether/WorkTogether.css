@@ -1,0 +1,27 @@
+.work-together-title {
+  margin: 0;
+
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.work-together-title a {
+  color: var(--light);
+  transition: all 0.3s;
+}
+
+.work-together-title a:hover {
+  color: var(--warm);
+}
+
+.work-together-title i:nth-child(1) {
+  color: var(--warm);
+}
+
+.work-together-title i:nth-child(2) {
+  color: var(--green);
+}
+
+.work-together-title i:nth-child(3) {
+  color: var(--cold);
+}

@@ -1,0 +1,15 @@
+.the-best h4 {
+  margin: 0;
+
+  font-weight: 400;
+  color: var(--warm);
+  font-size: 36px;
+}
+
+.the-best h3 {
+  margin: -30px 0 0;
+
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 1.1;
+}

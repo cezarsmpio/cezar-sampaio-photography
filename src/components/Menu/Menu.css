@@ -1,0 +1,33 @@
+.nav-menu {
+  text-align: center;
+}
+
+.nav-menu > .link {
+  margin: 0 20px;
+}
+
+
+.nav-menu > .link:first-child {
+  margin-left: 0;
+}
+
+.nav-menu > .link:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 730px) {
+  .nav-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
+  .nav-menu > .link:first-child {
+    margin-left: 20px;
+  }
+  
+  .nav-menu > .link:last-child {
+    margin-right: 20px;
+  }
+  
+}

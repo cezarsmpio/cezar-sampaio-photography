@@ -1,23 +1,34 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
-import { Intro } from "../components/Intro/Intro"
 import { TheBestTitle } from "../components/TheBestTitle/TheBestTitle"
 import { PhotoCard } from "../components/PhotoCard/PhotoCard"
 
-export default function IndexPage(props) {
+export default function WorkPage(props) {
   return (
-    <Layout className="homepage">
-      <section className="wrap homepage__intro">
-        <Intro />
-      </section>
-
-      <section className="wrap homepage__works">
-        <div className="homepage__works-title">
+    <Layout className="work">
+      <section className="wrap">
+        <div className="work__works-title">
           <TheBestTitle />
         </div>
 
-        <div className="homepage__gallery">
+        <div className="work__quote-container">
+          <figure className="work__quote">
+            <blockquote className="work__quote-text">
+              <p>
+                Love is friendship that has caught fire{" "}
+                <span role="img" aria-label="Fire">
+                  🔥
+                </span>
+              </p>
+            </blockquote>
+            <figcaption className="work__quote-caption">
+              ― Ann Landers
+            </figcaption>
+          </figure>
+        </div>
+
+        <div className="work__gallery">
           {props.data.sessions.nodes.map((session, index) => (
             <div key={index}>
               <PhotoCard
@@ -29,15 +40,6 @@ export default function IndexPage(props) {
             </div>
           ))}
         </div>
-
-        <div className="homepage__cta">
-          <Link to="/work" className="link">
-            All Work{" "}
-            <span role="img" aria-label="Finger pointing right">
-              👉
-            </span>
-          </Link>
-        </div>
       </section>
     </Layout>
   )
@@ -45,7 +47,7 @@ export default function IndexPage(props) {
 
 export const query = graphql`
   query {
-    sessions: allContentfulSession(sort: {fields: createdAt}, limit: 4) {
+    sessions: allContentfulSession(sort: {fields: createdAt}) {
       nodes {
         slug
         cover {

@@ -1,7 +1,26 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require("path")
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const workSingleTemplate = path.resolve(`src/templates/work-single.js`)
+  const result = await graphql(`
+    query {
+      sessions: allContentfulSession {
+        nodes {
+          slug
+          contentful_id
+        }
+      }
+    }
+  `)
+
+  result.data.sessions.nodes.forEach(node => {
+    createPage({
+      path: `/work/${node.slug}`,
+      component: workSingleTemplate,
+      context: {
+        id: node.contentful_id,
+      },
+    })
+  })
+}
