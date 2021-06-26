@@ -12,9 +12,9 @@ export function Menu() {
       <Link className="link" to="/work">
         Work
       </Link>
-      <Link className="link" to="/pricing">
+      {/* <Link className="link" to="/pricing">
         Pricing
-      </Link>
+      </Link> */}
       <Link
         className="link"
         to="https://instagram.com/cezarsmpio"
