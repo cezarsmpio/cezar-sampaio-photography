@@ -47,5 +47,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-8EWNBDRBQL",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
   ],
 }
