@@ -8,6 +8,7 @@
 .intro__pic {
   border-radius: 20px;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 .intro__children {

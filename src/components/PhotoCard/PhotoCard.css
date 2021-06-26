@@ -10,6 +10,7 @@
 .photo-card__picture {
   border-radius: 20px;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 .photo-card__title {
