@@ -10,7 +10,7 @@ module.exports = {
     author: `@cezarsmpio`,
     twitterUsername: `@cezarsmpio`,
     image: `/assets/images/icon.png`,
-    url: `https://cezarsampaio.com`
+    url: `https://cezarsampaio.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
