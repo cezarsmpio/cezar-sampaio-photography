@@ -8,10 +8,11 @@ export function Intro() {
       <div>
         <StaticImage
           src="../../../static/assets/images/cezar-sampaio.jpg"
-          width="450"
-          height="562"
+          width={450}
+          height={562}
           quality="100"
           className="intro__pic"
+          alt="A portrait picture of Cezar Sampaio"
         />
       </div>
       <div>

@@ -31,10 +31,11 @@ export default function AboutMePage() {
           <div>
             <StaticImage
               src="../../static/assets/images/bastei.jpg"
-              width="428"
-              height="594"
+              width={428}
+              height={594}
               quality="100"
               className="about-me__intro-zwei-pic"
+              alt="A picture of a stone bridge in Germany"
             />
           </div>
         </div>
@@ -43,10 +44,11 @@ export default function AboutMePage() {
           <div>
             <StaticImage
               src="../../static/assets/images/vatican.jpg"
-              width="808"
-              height="538"
+              width={808}
+              height={538}
               quality="100"
               className="about-me__intro-drei-pic"
+              alt="A picture of a famous staircase in Vatican"
             />
           </div>
 
