@@ -50,7 +50,7 @@ export default function WorkPage(props) {
 
 export const query = graphql`
   query {
-    sessions: allContentfulSession(sort: { fields: createdAt }) {
+    sessions: allContentfulSession(sort: { fields: createdAt, order: DESC }) {
       nodes {
         slug
         cover {

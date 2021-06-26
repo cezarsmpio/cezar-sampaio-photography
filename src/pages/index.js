@@ -48,7 +48,7 @@ export default function IndexPage(props) {
 
 export const query = graphql`
   query {
-    sessions: allContentfulSession(sort: { fields: createdAt }, limit: 4) {
+    sessions: allContentfulSession(sort: { fields: createdAt, order: DESC }, limit: 4) {
       nodes {
         slug
         cover {
