@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Layout } from "../components/layout"
 import { Seo } from "../components/Seo/Seo"
@@ -28,9 +28,14 @@ export default function PricingPage(props) {
 
               <div>
                 <p className="pricing__price-number">{price.price}</p>
-                <Link to="mailto:cezarsmpio@gmail.com" className="link">
+                <a
+                  href="https://wa.me/4915142871992"
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Book
-                </Link>
+                </a>
               </div>
             </div>
           ))}
