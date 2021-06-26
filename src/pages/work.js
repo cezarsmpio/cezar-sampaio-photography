@@ -3,10 +3,13 @@ import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { TheBestTitle } from "../components/TheBestTitle/TheBestTitle"
 import { PhotoCard } from "../components/PhotoCard/PhotoCard"
+import { Seo } from "../components/Seo/Seo"
 
 export default function WorkPage(props) {
   return (
     <Layout className="work">
+      <Seo title="Work" />
+
       <section className="wrap">
         <div className="work__works-title">
           <TheBestTitle />
@@ -47,7 +50,7 @@ export default function WorkPage(props) {
 
 export const query = graphql`
   query {
-    sessions: allContentfulSession(sort: {fields: createdAt}) {
+    sessions: allContentfulSession(sort: { fields: createdAt }) {
       nodes {
         slug
         cover {

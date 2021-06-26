@@ -1,8 +1,16 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Cezar Sampaio - Photography`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    titleTemplate: "%s · Cezar Sampaio - Photography",
+    description: `I’m Cezar, a passionated photographer based in Berlin, Germany. I’m inspired by these three pricinples: connection, emotion and sensitivity.`,
     author: `@cezarsmpio`,
+    twitterUsername: `@cezarsmpio`,
+    image: `/assets/images/icon.png`,
+    url: `https://cezarsampaio.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,18 +24,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: ``, // This path is relative to the root of the site.
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Cezar Sampaio`,
+        short_name: `Cezar Sampaio`,
+        start_url: `/`,
+        background_color: `#090909`,
+        theme_color: `#090909`,
+        display: `minimal-ui`,
+        icon: `static/assets/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -35,9 +43,8 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        spaceId: "wx5w6czqzf5u",
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: "ayLrmb695va9wtQKZ1pc5b24pFUD01inHPxGTf-G9RA",
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
   ],

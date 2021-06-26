@@ -4,10 +4,13 @@ import { Layout } from "../components/layout"
 import { Intro } from "../components/Intro/Intro"
 import { TheBestTitle } from "../components/TheBestTitle/TheBestTitle"
 import { PhotoCard } from "../components/PhotoCard/PhotoCard"
+import { Seo } from "../components/Seo/Seo"
 
 export default function IndexPage(props) {
   return (
     <Layout className="homepage">
+      <Seo title="Homepage" />
+
       <section className="wrap homepage__intro">
         <Intro />
       </section>
@@ -45,7 +48,7 @@ export default function IndexPage(props) {
 
 export const query = graphql`
   query {
-    sessions: allContentfulSession(sort: {fields: createdAt}, limit: 4) {
+    sessions: allContentfulSession(sort: { fields: createdAt }, limit: 4) {
       nodes {
         slug
         cover {

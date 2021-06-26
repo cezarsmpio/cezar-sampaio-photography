@@ -2,10 +2,13 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Layout } from "../components/layout"
 import { Intro } from "../components/Intro/Intro"
+import { Seo } from "../components/Seo/Seo"
 
 export default function AboutMePage() {
   return (
     <Layout className="about-me">
+      <Seo title="Who is Cezar" />
+
       <section className="wrap about-me__title">
         <h3>
           Who is <span>Cezar</span>

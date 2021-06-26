@@ -2,10 +2,13 @@ import * as React from "react"
 import { Link, graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Layout } from "../components/layout"
+import { Seo } from "../components/Seo/Seo"
 
 export default function PricingPage(props) {
   return (
     <Layout className="pricing">
+      <Seo title="Pricing" />
+
       <div className="wrap">
         <section className="pricing__prices">
           {props.data.pricing.nodes.map((price, index) => (
