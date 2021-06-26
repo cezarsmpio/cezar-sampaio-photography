@@ -104,7 +104,7 @@ body::before {
 
 .homepage__gallery {
   display: grid;
-  grid-template-columns: repeat(2, 450px);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 160px;
   row-gap: 130px;
   justify-content: center;
@@ -118,7 +118,6 @@ body::before {
 
 @media screen and (max-width: 1130px) {
   .homepage__gallery {
-    grid-template-columns: 1fr;
     column-gap: 40px;
     row-gap: 40px;
   }
@@ -240,7 +239,7 @@ body::before {
 
 .work__gallery {
   display: grid;
-  grid-template-columns: repeat(2, 450px);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 160px;
   row-gap: 130px;
 }
@@ -290,7 +289,6 @@ body::before {
 
 @media screen and (max-width: 1130px) {
   .work__gallery {
-    grid-template-columns: 1fr;
     column-gap: 40px;
     row-gap: 40px;
   }

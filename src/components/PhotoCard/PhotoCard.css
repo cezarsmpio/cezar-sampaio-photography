@@ -10,11 +10,6 @@
 .photo-card__picture {
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.4s;
-}
-
-.photo-card__picture:hover {
-  transform: scale(1.03) rotateX(5deg) translateY(-10px);
 }
 
 .photo-card__title {

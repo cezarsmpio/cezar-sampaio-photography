@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import PhotoGallery from "react-photo-gallery"
 import { useWindowWidth } from "@react-hook/window-size/throttled"
 import { Layout } from "../components/layout"
-import { GatsbyImage } from "gatsby-plugin-image"
+// import { GatsbyImage } from "gatsby-plugin-image"
 import { WorkTogether } from "../components/WorkTogether/WorkTogether"
 
 export default function WorkPage(props) {
@@ -42,23 +42,43 @@ export default function WorkPage(props) {
           margin={3}
           columns={columns}
           direction="column"
+          // renderImage={image => {
+          //   return (
+          //     <GatsbyImage
+          //       key={image.key}
+          //       image={{
+          //         width: image.photo.width,
+          //         height: image.photo.height,
+          //         layout: "constrained",
+          //         images: {
+          //           sources: [],
+          //           fallback: {
+          //             src: image.photo.src,
+          //             sizes: image.photo.sizes.join(""),
+          //             srcSet: image.photo.srcSet.join(""),
+          //           },
+          //         },
+          //       }}
+          //       style={{
+          //         position: "absolute",
+          //         top: image.top,
+          //         left: image.left,
+          //         margin: image.margin,
+          //       }}
+          //       alt=""
+          //     />
+          //   )
+          // }}
           renderImage={image => {
             return (
-              <GatsbyImage
+              <img
                 key={image.key}
-                image={{
-                  width: image.photo.width,
-                  height: image.photo.height,
-                  layout: "constrained",
-                  images: {
-                    sources: [],
-                    fallback: {
-                      src: image.photo.src,
-                      sizes: image.photo.sizes.join(""),
-                      srcSet: image.photo.srcSet.join(""),
-                    },
-                  },
-                }}
+                src={image.photo.src}
+                width={image.photo.width}
+                height={image.photo.height}
+                srcSet={image.photo.srcSet.join("")}
+                sizes={image.photo.sizes.join("")}
+                loading="lazy"
                 style={{
                   position: "absolute",
                   top: image.top,

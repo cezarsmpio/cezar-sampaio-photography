@@ -8,11 +8,6 @@
 .intro__pic {
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.5s;
-}
-
-.intro__pic:hover {
-  transform: scale(1.03) rotateX(5deg) translateY(-15px);
 }
 
 .intro__children {
