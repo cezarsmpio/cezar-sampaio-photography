@@ -7,8 +7,10 @@ export default function NotFoundPage() {
     <Layout className="not-found">
       <Seo title="Page not found" />
 
-      <h1 className="not-found__title">404</h1>
-      <h2 className="not-found__subtitle">Not Found</h2>
+      <div className="wrap">
+        <h1 className="not-found__title">404</h1>
+        <h2 className="not-found__subtitle">Not Found</h2>
+      </div>
     </Layout>
   )
 }

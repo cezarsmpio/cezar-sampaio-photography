@@ -205,9 +205,9 @@ body::before {
 
 @media screen and (max-width: 1024px) {
   .about-me__intro {
-    margin-bottom: 150px;  
+    margin-bottom: 150px;
   }
-  
+
   .about-me__intro-zwei {
     grid-template-columns: 1fr;
   }
@@ -343,6 +343,17 @@ body::before {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-family: var(--secondary-font);
+}
+
+@media screen and (max-width: 630px) {
+  .not-found__title {
+    font-size: 100px;
+  }
+
+  .not-found__subtitle {
+    font-size: 70px;
+
+  }
 }
 
 /* Pricing Page */
