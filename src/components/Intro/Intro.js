@@ -25,7 +25,7 @@ export function Intro() {
           </h3>
           <h2>
             I’m Cezar, a passionated photographer based in Berlin, Germany. I’m
-            inspired by these three pricinples: <i>connection</i>,{" "}
+            inspired by these three principles: <i>connection</i>,{" "}
             <i>emotion</i> and <i>sensitivity</i>.
             <br />
             <br />I hope you enjoy my work.
