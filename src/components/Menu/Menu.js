@@ -15,10 +15,18 @@ export function Menu() {
       <Link className="link" to="/pricing">
         Pricing
       </Link>
-      <Link className="link" to="https://instagram.com/cezarsmpio">
+      <Link
+        className="link"
+        to="https://instagram.com/cezarsmpio"
+        target="_blank"
+      >
         Instagram
       </Link>
-      <Link className="link" to="https://twitter.com/cezarsmpio">
+      <Link
+        className="link"
+        to="https://twitter.com/cezarsmpio"
+        target="_blank"
+      >
         Twitter
       </Link>
     </nav>
