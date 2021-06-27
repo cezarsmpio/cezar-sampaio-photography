@@ -6,6 +6,7 @@ import { useWindowWidth } from "@react-hook/window-size/throttled"
 import { Layout } from "../components/layout"
 // import { GatsbyImage } from "gatsby-plugin-image"
 import { WorkTogether } from "../components/WorkTogether/WorkTogether"
+import { Seo } from "../components/Seo/Seo"
 
 export default function WorkPage(props) {
   const { session } = props.data
@@ -29,6 +30,11 @@ export default function WorkPage(props) {
 
   return (
     <Layout className="work-single">
+      <Seo
+        title={session.name}
+        image={`https:${session.cover.gatsbyImageData.images.fallback.src}`}
+      />
+
       <div className="wrap">
         <div className="work-single__header">
           <h1 className="work-single__name">{session.name}</h1>
@@ -115,6 +121,16 @@ export const query = graphql`
     session: contentfulSession(contentful_id: { eq: $id }) {
       name
       description
+      cover {
+        gatsbyImageData(
+          jpegProgressive: true
+          quality: 90
+          width: 800
+          cropFocus: CENTER
+          formats: AUTO
+          outputPixelDensities: 2
+        )
+      }
       pictures {
         gatsbyImageData(
           quality: 60
