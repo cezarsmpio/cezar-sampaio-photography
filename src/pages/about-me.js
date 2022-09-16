@@ -23,7 +23,7 @@ export default function AboutMePage() {
         <div className="about-me__intro-zwei">
           <div>
             <h2 className="about-me__intro-zwei-title">
-              I’m Brazilian, 28 years old, married to a beautiful woman,
+              I’m Brazilian, married to a beautiful woman,
               software developer by formation and a photographer by passion.
             </h2>
           </div>
