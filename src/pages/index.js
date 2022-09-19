@@ -55,8 +55,8 @@ export const query = graphql`
           gatsbyImageData(
             jpegProgressive: true
             quality: 100
-            width: 450
-            height: 450
+            width: 900
+            height: 900
             cropFocus: CENTER
             formats: AUTO
             outputPixelDensities: 2
