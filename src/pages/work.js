@@ -56,9 +56,9 @@ export const query = graphql`
         cover {
           gatsbyImageData(
             jpegProgressive: true
-            quality: 90
-            width: 450
-            height: 450
+            quality: 100
+            width: 900
+            height: 900
             cropFocus: CENTER
             formats: AUTO
             outputPixelDensities: 2
