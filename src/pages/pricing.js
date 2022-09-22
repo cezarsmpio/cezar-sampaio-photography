@@ -52,7 +52,7 @@ export default function PricingPage(props) {
 
 export const query = graphql`
   {
-    pricing: allContentfulPricing(sort: { fields: price, order: ASC }) {
+    pricing: allContentfulPricing(sort: { fields: order, order: ASC }) {
       nodes {
         highlighted
         name
