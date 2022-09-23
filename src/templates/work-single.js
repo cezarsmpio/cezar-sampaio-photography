@@ -133,7 +133,7 @@ export const query = graphql`
       }
       pictures {
         gatsbyImageData(
-          quality: 60
+          quality: 80
           outputPixelDensities: 2
           width: 800
           jpegProgressive: true
