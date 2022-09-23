@@ -22,12 +22,12 @@ export function Menu() {
       >
         Instagram
       </Link>
-      <Link
+    <Link
         className="link"
-        to="https://twitter.com/cezarsmpio"
+        to="https://unsplash.com/@cezarsmpio"
         target="_blank"
       >
-        Twitter
+        Unsplash
       </Link>
     </nav>
   )
