@@ -42,7 +42,7 @@ export default function PricingPage(props) {
         </section>
 
         <p className="pricing__discount">
-          *Get 10% off by allowing me to share your photos on my portfolio and
+          *Get 5% off by allowing me to share your photos on my portfolio and
           social medias.
         </p>
       </div>
